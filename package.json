@@ -1,6 +1,6 @@
 {
-  "name": "npm-typescript-package-boilerplate",
-  "version": "0.0.0-development",
+  "name": "log-cli-uizzy",
+  "version": "0.0.1-development",
   "description": "A boilerplate repo for publishing typescript packages to npm",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -15,28 +15,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/93v/npm-typescript-package-boilerplate.git"
+    "url": "https://github.com/xGANDx/log_cli.git"
   },
   "keywords": [
     "Hello",
     "Greeter"
   ],
   "author": {
-    "name": "93v",
-    "email": "93v@protonmail.com"
+    "name": "xGANDx",
+    "email": "hahah@kfl.com"
   },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/93v/npm-typescript-package-boilerplate/issues"
   },
   "homepage": "https://github.com/93v/npm-typescript-package-boilerplate#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && npm test",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "npm run lint && npm test"
-    }
-  },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
@@ -58,5 +51,7 @@
   "files": [
     "dist/**/*"
   ],
-  "dependencies": {}
+  "dependencies": {
+    "axios": "^0.21.0"
+  }
 }

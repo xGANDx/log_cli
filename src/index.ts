@@ -1,4 +1,4 @@
-// const axios = require('axios');
+import axios from 'axios';
 
 export const greet = (name: string) => `Hello ${name}`;
 
@@ -12,17 +12,30 @@ interface Log {
     before?: JSON
     after?: JSON
     origen_id?: string
-    username?: string
     system?: boolean
 }
 
 export const makeLog = (log: Log, config: FactoryLog) => {
     console.log('makeLog: ', log);
     console.log(config);
+    axios({
+        url: `${config.endpoint}/`,
+        method: 'POST',
+        responseType: 'json',
+        data: log,
+        headers: {
+            'origin-name': config.origin
+        }
+    }).then(r => {
+        console.log(r);
+    }).catch(e => {
+        console.error(e);
+    });
 }
 
 interface FactoryLog {
-    endpoint: string
+    endpoint: string,
+    origin: string
 }
 
 export const factoryMakeLog = (config: FactoryLog) => {

@@ -1,6 +1,6 @@
 {
   "name": "log-cli-uizzy",
-  "version": "0.0.1-development",
+  "version": "0.0.4-development",
   "description": "A boilerplate repo for publishing typescript packages to npm",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
